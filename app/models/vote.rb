@@ -1,10 +1,10 @@
 class Vote < ActiveRecord::Base
   validates_presence_of :color, :word
 
-  def self.random
+  def self.random(attributes = {})
     new do |vote|
-      vote.word  = random_word
-      vote.color = random_color
+      vote.word  = attributes[:word]  || random_word
+      vote.color = attributes[:color] || random_color
     end
   end
 
