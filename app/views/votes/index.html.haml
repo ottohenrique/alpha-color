@@ -3,12 +3,12 @@
 %table
   %thead
     %tr
-      %th Votes
-      %th Word
       %th Color
+      %th Word
+      %th Votes
   %tbody
     - @votes.each do |vote|
       %tr
-        %td= vote.total
-        %td= vote.word
         %td(style="background-color: ##{vote.color}")
+        %td= vote.word
+        %td= vote.total
