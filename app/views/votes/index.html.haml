@@ -7,7 +7,8 @@
         %li
           %strong.word= word
           %ul.votes
+            - total = votes.inject(0) { |sum, vote| sum += vote.total }
             - votes.each do |vote|
-              %li{style: "background-color: ##{vote.color}; width: 10%;", title: "##{vote.color}"}
+              %li{style: "background-color: ##{vote.color}; width: #{Float(vote.total)/total}%;", title: "##{vote.color}"}
   - else
     No colors
