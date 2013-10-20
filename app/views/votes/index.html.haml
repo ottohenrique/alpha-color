@@ -1,0 +1,3 @@
+%ul
+  - @votes.each do |vote|
+    %li(style="background-color: ##{vote.color}")= vote.word
