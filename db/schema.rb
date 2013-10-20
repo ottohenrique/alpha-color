@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131020221118) do
+ActiveRecord::Schema.define(version: 20131020203401) do
 
   create_table "votes", force: true do |t|
-    t.string   "word"
-    t.string   "color"
+    t.string   "word",                   null: false
+    t.string   "color",                  null: false
+    t.integer  "total",      default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "total",      default: 0
   end
+
+  add_index "votes", ["total"], name: "index_votes_on_total"
+  add_index "votes", ["word", "color"], name: "index_votes_on_word_and_color", unique: true
 
 end
