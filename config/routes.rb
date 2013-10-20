@@ -1,5 +1,5 @@
 Alpha::Application.routes.draw do
-  resources :votes
+  resources :votes, only: [:index, :new, :create]
   root 'votes#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
