@@ -1,8 +1,8 @@
 class CreateVotes < ActiveRecord::Migration
   def change
     create_table :votes do |t|
-      t.references :word, index: true
-      t.references :color, index: true
+      t.string :word
+      t.string :color
 
       t.timestamps
     end

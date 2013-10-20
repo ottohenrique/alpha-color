@@ -13,24 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20131020203401) do
 
-  create_table "colors", force: true do |t|
-    t.string   "hex",        limit: 6
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "votes", force: true do |t|
-    t.integer  "word_id"
-    t.integer  "color_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "votes", ["color_id"], name: "index_votes_on_color_id"
-  add_index "votes", ["word_id"], name: "index_votes_on_word_id"
-
-  create_table "words", force: true do |t|
-    t.string   "name"
+    t.string   "word"
+    t.string   "color"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
