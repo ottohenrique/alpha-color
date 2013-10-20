@@ -1,3 +1,12 @@
-%ul
-  - @votes.each do |vote|
-    %li(style="background-color: ##{vote.color}")= vote.total
+%table
+  %thead
+    %tr
+      %th Votes
+      %th Word
+      %th Color
+  %tbody
+    - @votes.each do |vote|
+      %tr
+        %td= vote.total
+        %td= vote.word
+        %td(style="background-color: ##{vote.color}")
