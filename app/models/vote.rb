@@ -15,4 +15,10 @@ class Vote < ActiveRecord::Base
   def self.random_word
     Words.sample
   end
+
+  def self.register(vote_params)
+    @vote = Vote.where(vote_params).first || Vote.new(vote_params)
+    @vote.total += 1
+    @vote
+  end
 end
