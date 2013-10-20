@@ -1,5 +1,8 @@
 @import 'bourbon'
 @import 'reset'
+@import 'animate'
+
+@import 'mixins'
 
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic)
 
@@ -64,6 +67,7 @@ nav.colors
     width: 33.333333333%
     text-align: center
     text-decoration: none
+    +animate(fadeIn)
     +box-sizing(border-box)
 
     &:nth-child(3n)

@@ -1,0 +1,36 @@
+// Animate
+=animate($style)
+  -webkit-animation-fill-mode: both
+  -moz-animation-fill-mode: both
+  -ms-animation-fill-mode: both
+  -o-animation-fill-mode: both
+  animation-fill-mode: both
+  -webkit-animation-duration: .3s
+  -moz-animation-duration: .3s
+  -ms-animation-duration: .3s
+  -o-animation-duration: .3s
+  animation-duration: .3s
+  -webkit-animation-name: $style
+  -moz-animation-name: $style
+  -o-animation-name: $style
+  animation-name: $style
+  @if $style == "flip" or "flipInX" or "flipOutX" or "flipInY" or "flipOutY"
+    -webkit-backface-visibility: visible !important
+    -moz-backface-visibility: visible !important
+    -o-backface-visibility: visible !important
+    backface-visibility: visible !important
+  @if $style == "swing"
+    -webkit-transform-origin: top center
+    -moz-transform-origin: top center
+    -o-transform-origin: top center
+    transform-origin: top center
+  @if $style == "lightSpeedIn"
+    -webkit-animation-timing-function: ease-out
+    -moz-animation-timing-function: ease-out
+    -o-animation-timing-function: ease-out
+    animation-timing-function: ease-out
+  @if $style == "lightSpeedOut"
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
