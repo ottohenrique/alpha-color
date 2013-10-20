@@ -1,9 +1,3 @@
-%h1= @word
-
-%ul
+%nav.colors
   - @votes.each do |vote|
-    %li(style="background-color: ##{vote.color}")
-      = link_to "Vote", vote_path(vote: { word: vote.word, color: vote.color }), method: :post
-
-= link_to "Skip", :root
-= link_to "View stats", :stats
+    = link_to "", vote_path(vote: { word: vote.word, color: vote.color }), method: :post, style: "background-color: ##{vote.color}"

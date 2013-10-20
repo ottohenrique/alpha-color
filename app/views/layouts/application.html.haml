@@ -8,25 +8,19 @@
 
   %body
     %header.top
-      What color best represents&nbsp;
-      %span.word> love
-      ?
+      %h1
+        What color best represents&nbsp;
+        %span.word>= @word
+        ?
       %nav
-        = link_to '#', class: 'stats' do
+        = link_to :stats, class: 'stats' do
           ←
           %span.cut-off See the
           stats
-        = link_to '#', class: 'skip' do
+        = link_to :root, class: 'skip' do
           Skip
           %span.cut-off this word
           →
-    %main
-      %nav.colors(style='background-color: #f00')
-        = link_to '', '#'
-        = link_to '', '#'
-        = link_to '', '#'
-        = link_to '', '#'
-        = link_to '', '#'
-        = link_to '', '#'
-    =# yield
+    %main= yield
     = javascript_include_tag "application"
+
