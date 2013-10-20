@@ -1,5 +1,5 @@
 class VotesController < ApplicationController
-  CHOICES = 9
+  CHOICES = 6
 
   def index
     @votes = Vote.all
