@@ -4,11 +4,13 @@
   %thead
     %tr
       %th Color
-      %th Word
-      %th Votes
+      %th Stats
   %tbody
-    - @votes.each do |vote|
+    - @words.each do |word, votes|
       %tr
-        %td(style="background-color: ##{vote.color}")
-        %td= vote.word
-        %td= vote.total
+        %td= word
+
+        %td
+          - votes.each do |vote|
+            - vote.total.times do
+              %span{style: "background-color: ##{vote.color}"} &nbsp;
