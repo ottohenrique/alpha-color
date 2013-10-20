@@ -8,6 +8,6 @@
           %strong.word= word
           %ul.votes
             - votes.each do |vote|
-              %li{style: "background-color: ##{vote.color} width: 10%", title: "##{vote.color}"}
+              %li{style: "background-color: ##{vote.color}; width: 10%;", title: "##{vote.color}"}
   - else
     No colors
