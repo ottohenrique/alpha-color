@@ -81,6 +81,31 @@ nav.colors
       box-shadow: inset 0 0 0 $buffer #fff
       outline: none
 
+.stats
+  background-color: #fff
+  margin: ($buffer * 2) auto
+  padding: $buffer
+  max-width: 500px
+
+ul.words > li
+  border-bottom: 1px solid #ccc
+  padding: $buffer
+
+  &:last-child
+    border: none
+
+  &:hover
+    background-color: #eee
+
+ul.votes
+  float: right
+  width: 200px
+  +clearfix
+
+  li
+    float: left
+    height: $buffer
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait)
   .cut-off
     display: none

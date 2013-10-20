@@ -1,16 +1,13 @@
 = render 'layouts/header_stats'
 
-%table
-  %thead
-    %tr
-      %th Color
-      %th Stats
-  %tbody
-    - @words.each do |word, votes|
-      %tr
-        %td= word
-
-        %td
-          - votes.each do |vote|
-            - vote.total.times do
-              %span{style: "background-color: ##{vote.color}"} &nbsp;
+%section.stats
+  - if @words.any?
+    %ul.words
+      - @words.each do |word, votes|
+        %li
+          %strong.word= word
+          %ul.votes
+            - votes.each do |vote|
+              %li{style: "background-color: ##{vote.color} width: 10%", title: "##{vote.color}"}
+  - else
+    No colors
