@@ -2,7 +2,7 @@ class VotesController < ApplicationController
   CHOICES = 6
 
   def index
-    @votes = Vote.order("total DESC")
+    @votes = Vote.order("word ASC")
   end
 
   def new
