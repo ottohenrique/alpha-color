@@ -2,10 +2,31 @@
 
 %html
   %head
-    %title We need a title
+    %title Alpha Color
     = stylesheet_link_tag "application", media: "all"
     = csrf_meta_tags
 
   %body
-    = yield
+    %header.top
+      What color best represents&nbsp;
+      %span.word> love
+      ?
+      %nav
+        = link_to '#', class: 'stats' do
+          ←
+          %span.cut-off See the
+          stats
+        = link_to '#', class: 'skip' do
+          Skip
+          %span.cut-off this word
+          →
+    %main
+      %nav.colors(style='background-color: #f00')
+        = link_to '', '#'
+        = link_to '', '#'
+        = link_to '', '#'
+        = link_to '', '#'
+        = link_to '', '#'
+        = link_to '', '#'
+    =# yield
     = javascript_include_tag "application"
