@@ -1,5 +1,5 @@
 class VotesController < ApplicationController
-  CHOICES = 6
+  CHOICES = 9
 
   def index
     @votes = Vote.order("word ASC")
