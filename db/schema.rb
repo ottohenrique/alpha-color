@@ -21,12 +21,12 @@ ActiveRecord::Schema.define(version: 20131020203401) do
 
   create_table "votes", force: true do |t|
     t.integer  "word_id"
-    t.integer  "coloer_id"
+    t.integer  "color_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "votes", ["coloer_id"], name: "index_votes_on_coloer_id"
+  add_index "votes", ["color_id"], name: "index_votes_on_color_id"
   add_index "votes", ["word_id"], name: "index_votes_on_word_id"
 
   create_table "words", force: true do |t|
