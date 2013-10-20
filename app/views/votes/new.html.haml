@@ -1,12 +1,7 @@
 %ul
   - @votes.each do |vote|
     %li(style="background-color: ##{vote.color}")
-      = form_for vote do |f|
-        = vote.color
-
-        = f.hidden_field :color
-        = f.hidden_field :word
-
-        = f.submit vote.word
+      = vote.color
+      = link_to vote.word, vote_path(vote: { word: vote.word, color: vote.color }), method: :post
 
 = link_to "Skip", :root

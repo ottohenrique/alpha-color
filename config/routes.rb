@@ -1,5 +1,5 @@
 Alpha::Application.routes.draw do
-  resources :votes, only: [:create]
+  post 'vote' => 'votes#create'
   get 'stats' => 'votes#index', as: :stats
   root 'votes#new'
 
