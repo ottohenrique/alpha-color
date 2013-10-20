@@ -6,8 +6,8 @@ class VotesController < ApplicationController
   end
 
   def new
-    word = Vote.random_word
-    @votes = CHOICES.times.collect { Vote.random(word: word) }
+    @word = Vote.random_word
+    @votes = CHOICES.times.collect { Vote.random(word: @word) }
   end
 
   def create
