@@ -1,0 +1,14 @@
+%header.top
+  %h1
+    What color best represents&nbsp;
+    %span.word>= @word
+    ?
+  %nav
+    = link_to :stats, class: 'stats' do
+      ←
+      %span.cut-off See the
+      stats
+    = link_to :root, class: 'skip' do
+      Skip
+      %span.cut-off this word
+      →

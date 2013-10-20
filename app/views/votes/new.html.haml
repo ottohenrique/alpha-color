@@ -1,3 +1,4 @@
+= render 'layouts/header_vote'
 %nav.colors
   - @votes.each do |vote|
     = link_to "", vote_path(vote: { word: vote.word, color: vote.color }), method: :post, style: "background-color: ##{vote.color}"
