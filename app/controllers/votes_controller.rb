@@ -11,7 +11,8 @@ class VotesController < ApplicationController
   end
 
   def create
-    @vote = Vote.new(vote_params)
+    @vote = Vote.where(vote_params).first || Vote.new(vote_params)
+    @vote.total += 1
 
     if @vote.save
       redirect_to :root
