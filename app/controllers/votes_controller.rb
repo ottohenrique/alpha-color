@@ -13,7 +13,7 @@ class VotesController < ApplicationController
     @vote = Vote.new(vote_params)
 
     if @vote.save
-      redirect_to :root, notice: 'Vote was successfully created.'
+      redirect_to :root
     else
       render action: 'new'
     end
