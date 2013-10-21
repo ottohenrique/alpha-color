@@ -9,6 +9,6 @@
           %ul.votes
             - total = votes.inject(0) { |sum, vote| sum += vote.total }
             - votes.each do |vote|
-              %li{style: "background-color: ##{vote.color}; width: #{Float(vote.total)/total}%;", title: "##{vote.color}"}
+              %li{style: "background-color: ##{vote.color}; width: #{Float(vote.total)/total * 100}%;", title: "##{vote.color}"}
   - else
     No colors
