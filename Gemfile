@@ -1,18 +1,16 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', github: 'rails/rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-
-# Use Haml
-gem 'haml-rails', '~> 0.4'
-
-# Use Bourbon mixins
+# Front-end
+gem 'sass-rails'
+gem 'haml-rails'
+gem 'normalize-rails'
+gem 'autoprefixer-rails'
 gem 'bourbon'
 
 # Use Uglifier as compressor for JavaScript assets
