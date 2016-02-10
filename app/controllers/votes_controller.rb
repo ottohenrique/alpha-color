@@ -2,7 +2,10 @@ class VotesController < ApplicationController
   CHOICES = Integer(ENV['OPTIONS'] || 9)
 
   def index
-    @words = Vote.order(:word, :color).group(:word, :color, :total).group_by(&:word)
+    @words = Vote.select(:word, :color, :total)
+      .order(:word, :color)
+      .group(:word, :color, :total)
+      .group_by(&:word)
   end
 
   def new
